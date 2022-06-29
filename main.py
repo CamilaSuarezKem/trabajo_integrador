@@ -13,15 +13,21 @@ def main():
                 agregar_paciente(lista)
             elif int(op) == 2:
                 paciente = buscar_paciente(lista)
-                menu_paciente(paciente,lista)
+                if paciente != None:
+                    menu_paciente(paciente,lista)
         elif int(op) == 3 or int(op) == 4:
             profesionales = leer_prof()
             if int(op) == 3:
                 agregar_profesional(profesionales)
             elif int(op) == 4:
                 listar_prof(profesionales)
-        else: print("El valor ingresado no está entre las opciones 😕. Por favor, ingrese un número válido.")
-    else: print("El valor ingresado NO es un número 😕, por favor ingrese una de las opciones.")
+        else: 
+            print("El valor ingresado no está entre las opciones 😕. Por favor, ingrese un número válido.")
+            print("")
+
+    else: 
+        print("El valor ingresado NO es un número 😕, por favor ingrese una de las opciones.")
+        print("")
     
 def mostrar_menu_opciones():
     print(" ")

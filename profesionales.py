@@ -21,11 +21,11 @@ def agregar_profesional(profesionales=[]):
     nacionalidad = input("Ingrese nacionalidad del médico: ")
     profesionales.append(
         {
-            "dni" : dni,
-            "nombre" : nombre,
-            "apellido" : apellido,
-            "fecha_nacimiento" : nacimiento,
-            "nacionalidad" : nacionalidad,
+            "Dni" : dni,
+            "Nombre" : nombre,
+            "Apellido" : apellido,
+            "Fecha_nacimiento" : nacimiento,
+            "Nacionalidad" : nacionalidad,
         }
     )
     print("")
@@ -38,6 +38,7 @@ def agregar_profesional(profesionales=[]):
     fechaa = datetime.strptime(nacimiento, "%d/%m/%Y")
     edad = relativedelta(datetime.now(), fechaa)
     print(f"Edad: {edad.years} años")
+    print("")
     with open('profesionales.json', 'w') as f:
         json.dump(profesionales, f, indent=4)
 

@@ -86,7 +86,7 @@ def buscar_paciente(lista):
     print(" 3️⃣   Su enfermedad/afección.")
     print(" 4️⃣   El médico que lo atendió.")
     print(" 5️⃣   Su nacionalidad.")
-    print(" 0️⃣   Salir.")
+    print(" 0️⃣   Volver para atrás.")
     print("")
     res = input("Ingrese una opción: ")
     if not res.isnumeric():
@@ -107,11 +107,10 @@ def buscar_paciente(lista):
     elif res == 5:
         pacientes = filtrar_nacionalidad(lista)
     elif res == 0:# salida del menu
-        return None
+        print("")
+        return 
     else:
         print("La opción ingresada no es correcta 😕, por favor, intente nuevamente.")
-       
-        # Acá también tengo que cortar
 
     if len(pacientes) > 1:
         print(yaml.dump(pacientes, sort_keys=False, default_flow_style=False))
@@ -120,13 +119,14 @@ def buscar_paciente(lista):
         paciente = lista[(n-1)]
         print("")
         print("¿Quiere editar al paciente ",paciente["Nombre"],  paciente["Apellido"],"?")
-        res = input("Ingrese 1 si su respuesta es SI o ingrese 2 si su respuesta es NO y quiere editar a otro paciente: ")
+        print("Ingrese 1 si su respuesta es SI o ingrese 2 si su respuesta es NO y quiere editar a otro paciente: ")
+        res = input("Respuesta: ")
         if int(res) == 1:    
             print("")
-            print("Ha elegido el paciente: ")
-            print("")
-            print(yaml.dump(lista[(n-1)], sort_keys=False, default_flow_style=False))
-            edad_paciente(paciente)
+            # print("Ha elegido el paciente: ")
+            # print("")
+            # print(yaml.dump(lista[(n-1)], sort_keys=False, default_flow_style=False))
+            # edad_paciente(paciente)
         elif int(res) == 2:
             buscar_paciente(lista)
     elif len(pacientes) == 1:
@@ -143,7 +143,6 @@ def buscar_paciente(lista):
     return paciente
 
 def editar_paciente(lista, paciente):
-    # lksajdflkajdsflkjads
     # Input lista de pacientes, paciente (1)
     print("")
     print("¿Qué datos quieres editar?")
@@ -164,7 +163,6 @@ def editar_paciente(lista, paciente):
         Nombre = input("Ingrese el nombre: ")
         paciente["Nombre"] = Nombre
     elif op == 4:
-        # Fecha = (input("Ingrese el DNI correspondiente: "))
         # certifico que sea una Fecha
         while True:
             try:
@@ -202,7 +200,6 @@ def eliminar_paciente(lista, paciente):
     print("")
     guardar_listaPacientes(lista)
 
-
 def filtrar_nombre(lista):
     res = []
     print(" ")
@@ -210,9 +207,17 @@ def filtrar_nombre(lista):
     for elem in lista:
         if elem["Nombre"].lower() == Nombre.lower() or elem["Apellido"].lower() == Nombre.lower(): 
             res.append(elem)
+            # print("")
+            # print("Se ha encontrado lo siguiente: ")
+            # print("")
+        else: 
             print("")
-            print("Se ha encontrado lo siguiente: ")
+            print("No se ha encontrado ningún paciente con ese nombre/apellido 😕. Intente nuevamente.")
             print("")
+            input("Presione ENTER para continuar... ")
+            print("")
+            buscar_paciente(lista)
+
     return res
 
 def filtrar_nacionalidad(lista):
