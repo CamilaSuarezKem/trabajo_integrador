@@ -1,0 +1,114 @@
+[
+    {
+        "Numero_Paciente": 1,
+        "DNI": 39029137,
+        "Nombre": "camila",
+        "Apellido": "suarez",
+        "Nacimiento": "15/02/1996",
+        "Nacionalidad": "argentina",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "fibromialgia",
+                "Medico": "bustamante",
+                "Observacion": "ninguna"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 3,
+        "DNI": 23324,
+        "Nombre": "aesdf",
+        "Apellido": "fdsa",
+        "Nacimiento": "03/03/2003",
+        "Nacionalidad": "ar",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "sfad",
+                "Medico": "dsf",
+                "Observacion": "fdsa"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 4,
+        "DNI": 2312,
+        "Nombre": "aslkfj",
+        "Apellido": "dsf",
+        "Nacimiento": "20/02/2000",
+        "Nacionalidad": "arg",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "sfd",
+                "Medico": "ert",
+                "Observacion": "tew"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 5,
+        "DNI": 4545354,
+        "Nombre": "aaaaaaaanda",
+        "Apellido": "dale",
+        "Nacimiento": "30/01/1999",
+        "Nacionalidad": "ads",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "sda",
+                "Medico": "dsa",
+                "Observacion": "fds"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 6,
+        "DNI": 123123,
+        "Nombre": "rerr",
+        "Apellido": "aaaa",
+        "Nacimiento": "28/08/2000",
+        "Nacionalidad": "arg",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "ninguna",
+                "Medico": "nad",
+                "Observacion": "sss"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 7,
+        "DNI": 3192383,
+        "Nombre": "Micaela",
+        "Apellido": "Suarez",
+        "Nacimiento": "12/10/1994",
+        "Nacionalidad": "argentina",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "fiebre",
+                "Medico": "Lopez",
+                "Observacion": "ninguna"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 8,
+        "DNI": 12345,
+        "Nombre": "Alice",
+        "Apellido": "Mart\u00ednez",
+        "Nacimiento": "13/09/1999",
+        "Nacionalidad": "arg",
+        "historia_clinica": [
+            {
+                "Fecha": "28/06/2022",
+                "Enfermedad": "fiebre",
+                "Medico": "Gonz\u00e1lez",
+                "Observacion": "ninguna"
+            }
+        ]
+    }
+]
