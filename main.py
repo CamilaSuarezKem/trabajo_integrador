@@ -2,6 +2,7 @@ from pacientes import*
 from profesionales import*
 
 def main():
+    # aca inicia el programa
     print("")
     print("             🧬 Instituto Médico las Luciérnagas 🧬              ")
     op = mostrar_menu_opciones() 
