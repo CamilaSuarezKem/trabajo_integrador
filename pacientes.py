@@ -3,6 +3,8 @@ import json
 from datetime import datetime
 import yaml
 from dateutil.relativedelta import relativedelta
+import sys
+# -*- coding: utf-8 -*-
 
 nombre_archivo = 'datos_pacientes.json'
 
@@ -71,7 +73,25 @@ def agregar_historia_clinica(lista, paciente):
     historia = { "Fecha" : Fecha, "Enfermedad" : Enfermedad, "Medico" : Medico, "observacion" : Observacion}
     paciente["historia_clinica"].append(historia)
     print("")
-    print(yaml.dump(paciente, sort_keys=False, default_flow_style=False), "✅")
+    print(paciente["Nombre"], paciente["Apellido"], "✅")
+    print("DNI: ",paciente["DNI"])
+    print("Nacimiento: ",paciente["Nacimiento"])
+    print("Nacionalidad: ",paciente["DNI"])
+    print("Historia clínica:")
+    print("Enfermedad/afección: ", paciente["historia_clinica"][0]["Enfermedad"])
+    # print("Entre enfermeded")
+    print("Médico que lo/a atendió: ",paciente["historia_clinica"][0]["Medico"])
+    # print("medic")
+    print("Observación: ",paciente["historia_clinica"][0]["Observacion"])
+    print("Fecha: ",paciente["historia_clinica"][0]["Fecha"])
+    print("")
+    print("Enfermedad/afección: ", paciente["historia_clinica"][1]["Enfermedad"])
+    # print("Entre enfermeded")
+    print("Médico que lo/a atendió: ",paciente["historia_clinica"][1]["Medico"])
+    # print("medic")
+    print("Observación: ",paciente["historia_clinica"][1]["Observacion"])
+    print("Fecha: ",paciente["historia_clinica"][1]["Fecha"])
+    print("")
     guardar_listaPacientes(lista)
     return
 
@@ -123,14 +143,11 @@ def buscar_paciente(lista):
         res = input("Respuesta: ")
         if int(res) == 1:    
             print("")
-            # print("Ha elegido el paciente: ")
-            # print("")
-            # print(yaml.dump(lista[(n-1)], sort_keys=False, default_flow_style=False))
-            # edad_paciente(paciente)
         elif int(res) == 2:
             buscar_paciente(lista)
     elif len(pacientes) == 1:
         paciente = pacientes[0]
+        print("")
         print('Se ha seleccionado a ', paciente['Nombre'])
         edad_paciente(paciente)
     else:
@@ -184,7 +201,17 @@ def editar_paciente(lista, paciente):
     print("")
     print("✅ Se editó correctamente a: ")
     print("")
-    print(yaml.dump(paciente, sort_keys=False, default_flow_style=False))
+    print(paciente["Nombre"], paciente["Apellido"])
+    print("DNI: ",paciente["DNI"])
+    print("Nacimiento: ",paciente["Nacimiento"])
+    print("Nacionalidad: ",paciente["DNI"])
+    print("Enfermedad/afección: ", paciente["historia_clinica"][0]["Enfermedad"])
+    # print("Entre enfermeded")
+    print("Médico que lo/a atendió: ",paciente["historia_clinica"][0]["Medico"])
+    # print("medic")
+    print("Observación: ",paciente["historia_clinica"][0]["Observacion"])
+    print("Fecha: ",paciente["historia_clinica"][0]["Fecha"])
+    print("")
     guardar_listaPacientes(lista)
     return
 
@@ -207,16 +234,15 @@ def filtrar_nombre(lista):
     for elem in lista:
         if elem["Nombre"].lower() == Nombre.lower() or elem["Apellido"].lower() == Nombre.lower(): 
             res.append(elem)
-            # print("")
-            # print("Se ha encontrado lo siguiente: ")
-            # print("")
-        else: 
-            print("")
-            print("No se ha encontrado ningún paciente con ese nombre/apellido 😕. Intente nuevamente.")
-            print("")
-            input("Presione ENTER para continuar... ")
-            print("")
-            buscar_paciente(lista)
+            # print("ENTREEEEEEE Y AGREGUÉ")
+        # else: 
+        #     print("ESTOY ENTRANDO MAL")
+        #     print("")
+        #     print("No se ha encontrado ningún paciente con ese nombre/apellido 😕. Intente nuevamente.")
+        #     print("")
+        #     input("Presione ENTER para continuar... ")
+        #     print("")
+        #     buscar_paciente(lista)
 
     return res
 

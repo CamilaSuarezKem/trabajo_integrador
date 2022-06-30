@@ -15,6 +15,10 @@ def main():
                 paciente = buscar_paciente(lista)
                 if paciente != None:
                     menu_paciente(paciente,lista)
+                else: 
+                    print("No se ha encontrado ningún paciente con esa característica. Por favor, vuelva a intentarlo.")
+                    buscar_paciente(lista)
+
         elif int(op) == 3 or int(op) == 4:
             profesionales = leer_prof()
             if int(op) == 3:
