@@ -3,8 +3,6 @@ import json
 from datetime import datetime
 import yaml
 from dateutil.relativedelta import relativedelta
-import sys
-# -*- coding: utf-8 -*-
 
 nombre_archivo = 'datos_pacientes.json'
 
@@ -65,7 +63,7 @@ def agregar_paciente(pacientes=[]):
 
 def agregar_historia_clinica(lista, paciente):
     print("")
-    print("Ingrese una nuvea historia clínica para el paciente:")
+    print("Ingrese una nueva historia clínica para el paciente:")
     Fecha = datetime.today().strftime('%d/%m/%Y')
     Enfermedad = input("Ingrese la enfermedad/afección que padece: ")
     Medico = input("Ingrese el médico que lo atenderá: ")
@@ -75,24 +73,6 @@ def agregar_historia_clinica(lista, paciente):
     print("")
     print("La nueva historia clínica de",paciente["Nombre"],paciente["Apellido"],"se ha guardado exitosamente ✅")
     print("")
-    # print("DNI: ",paciente["DNI"])
-    # print("Nacimiento: ",paciente["Nacimiento"])
-    # print("Nacionalidad: ",paciente["DNI"])
-    # print("Historia clínica:")
-    # print("Enfermedad/afección: ", paciente["historia_clinica"][0]["Enfermedad"])
-    # # print("Entre enfermeded")
-    # print("Médico que lo/a atendió: ",paciente["historia_clinica"][0]["Medico"])
-    # # print("medic")
-    # print("Observación: ",paciente["historia_clinica"][0]["Observacion"])
-    # print("Fecha: ",paciente["historia_clinica"][0]["Fecha"])
-    # print("")
-    # print("Enfermedad/afección: ", paciente["historia_clinica"][1]["Enfermedad"])
-    # # print("Entre enfermeded")
-    # print("Médico que lo/a atendió: ",paciente["historia_clinica"][1]["Medico"])
-    # # print("medic")
-    # print("Observación: ",paciente["historia_clinica"][1]["Observacion"])
-    # print("Fecha: ",paciente["historia_clinica"][1]["Fecha"])
-    # print("")
     guardar_listaPacientes(lista)
     return
 
@@ -197,8 +177,6 @@ def editar_paciente(lista, paciente):
         Nacionalidad = input("Ingrese la nacionalidad del paciente: ")
         paciente["Nacionalidad"] = Nacionalidad
     else: print("El valor ingresado no está en nuestras opciones 😕, por favor ingrese un número válido.")
-    # acá tengo que saltar y no mostrar lo de abajo
-    ## mostrar
     print("")
     print("✅ Se editó correctamente a: ")
     print("")
@@ -207,9 +185,7 @@ def editar_paciente(lista, paciente):
     print("Nacimiento: ",paciente["Nacimiento"])
     print("Nacionalidad: ",paciente["DNI"])
     print("Enfermedad/afección: ", paciente["historia_clinica"][0]["Enfermedad"])
-    # print("Entre enfermeded")
     print("Médico que lo/a atendió: ",paciente["historia_clinica"][0]["Medico"])
-    # print("medic")
     print("Observación: ",paciente["historia_clinica"][0]["Observacion"])
     print("Fecha: ",paciente["historia_clinica"][0]["Fecha"])
     print("")
@@ -235,16 +211,6 @@ def filtrar_nombre(lista):
     for elem in lista:
         if elem["Nombre"].lower() == Nombre.lower() or elem["Apellido"].lower() == Nombre.lower(): 
             res.append(elem)
-            # print("ENTREEEEEEE Y AGREGUÉ")
-        # else: 
-        #     print("ESTOY ENTRANDO MAL")
-        #     print("")
-        #     print("No se ha encontrado ningún paciente con ese nombre/apellido 😕. Intente nuevamente.")
-        #     print("")
-        #     input("Presione ENTER para continuar... ")
-        #     print("")
-        #     buscar_paciente(lista)
-
     return res
 
 def filtrar_nacionalidad(lista):
