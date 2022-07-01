@@ -1,3 +1,16 @@
 [
-    
+    {
+        "Dni": 18044321,
+        "Nombre": "Pedro",
+        "Apellido": "Lemo",
+        "Fecha_nacimiento": "13/09/1963",
+        "Nacionalidad": "argentino"
+    },
+    {
+        "Dni": 15933045,
+        "Nombre": "Juan Pablo",
+        "Apellido": "Carrara",
+        "Fecha_nacimiento": "23/08/1975",
+        "Nacionalidad": "argentino"
+    }
 ]

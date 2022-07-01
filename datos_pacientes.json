@@ -1,2 +1,40 @@
 [
+    {
+        "Numero_Paciente": 1,
+        "DNI": 39029137,
+        "Nombre": "Camila",
+        "Apellido": "Suárez",
+        "Nacimiento": "15/02/1996",
+        "Nacionalidad": "argentina",
+        "historia_clinica": [
+            {
+                "Fecha": "30/06/2022",
+                "Enfermedad": "Fibromialgia",
+                "Medico": "Bustamante",
+                "Observacion": "Fatiga y dolores musculares"
+            },
+            {
+                "Fecha": "30/06/2022",
+                "Enfermedad": "Lumbalgia",
+                "Medico": "Rodríguez",
+                "observacion": "Dolores"
+            }
+        ]
+    },
+    {
+        "Numero_Paciente": 2,
+        "DNI": 31365415,
+        "Nombre": "Jorge",
+        "Apellido": "Ignacio",
+        "Nacimiento": "01/03/1985",
+        "Nacionalidad": "argentino",
+        "historia_clinica": [
+            {
+                "Fecha": "30/06/2022",
+                "Enfermedad": "Fiebre",
+                "Medico": "Lemo",
+                "Observacion": "Ninguna"
+            }
+        ]
+    }
 ]
